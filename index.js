@@ -28,11 +28,18 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+
+  The difference between counter1 and counter2 is that the variable is declared in the function for counter1 and the variable is declared outside the function for counter2.
   
   2. Which of the two uses a closure? How can you tell?
+
+  counter1 uses a closure because it has a function within the function
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+     counter1 is preferable because it keeps the code clean and the variable is only declared in the function. 
+     counter2 would be preferable if the declared variable is needed for multiple functions.
 */
 
 // counter1 code
@@ -62,9 +69,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    return Math.floor(Math.random() * 3);
 }
+
+console.log(inning())
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
@@ -81,7 +90,7 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inning, num){
   /*Code Here*/
 }
 
